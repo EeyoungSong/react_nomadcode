@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body id="root">
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        const h3 = React.createElement(
+            "h3", {
+                onMouseEnter: () => console.log("mouse enter"),
+            }, 
+            null,
+            "Hello, I am a span.");
+        const btn = React.createElement("button", {
+            onClick: () => console.log("im clicked"),
+        }, "Click me");
+        const container = React.createElement("div", null, [h3, btn])
+        ReactDOM.render(container, root); //render : show it to a user
+
+    </script>
+</html>
+<!-- key of React.js 
+바닐라 js와 반대임 : js로 처리 후 html 생성 -->
